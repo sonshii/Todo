@@ -1,0 +1,20 @@
+.InputTodo{
+    padding: 20px 0px 30px 0px;
+    width: 100%;
+}
+.InputTodo input{
+    width: 70%;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 5px;
+    margin: 0 10px 0 10px;
+}
+label{
+}
+label:before{
+    content: '❯';
+    font-size: 22px;
+    color: #e6e6e6;
+    padding: 0px 20px 0px 0px;
+    transform: rotate(90deg);
+}

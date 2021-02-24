@@ -1,0 +1,20 @@
+footer{
+    display: flex;
+    justify-content:flex-start;
+    width: 100%;
+    margin-left: 30px;
+}
+.footButton{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+.Wrap-row{
+    width: 430px;
+    display: flex;
+    justify-content: space-between;
+}
+.DeleteButton{
+    margin-left: 50px;
+    margin-right: 20px;
+}
