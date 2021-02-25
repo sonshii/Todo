@@ -7,10 +7,10 @@ import TodoItem from '../TodoItem/TodoItem';
 import './TodoList.css';
 
 const TodoList = ({
-  todos, onCheck, delTodo, toggle,
+  todos, toggleCompleted, deleteTodo, filter,
 }) => {
-  const todoFilter = (toggle) => {
-    switch (toggle) {
+  const todoFilter = (filter) => {
+    switch (filter) {
       case 'active':
         return todos.filter((todo) => !todo.completed);
       case 'completed':
@@ -22,12 +22,12 @@ const TodoList = ({
   return (
     <div className="listWrap">
       <ul>
-        {todoFilter(toggle).map((item) => (
+        {todoFilter(filter).map((item) => (
           <TodoItem
             key={item.id}
             {...item}
-            onCheck={onCheck}
-            delTodo={delTodo}
+            toggleCompleted={toggleCompleted}
+            deleteTodo={deleteTodo}
           />
         ))}
       </ul>

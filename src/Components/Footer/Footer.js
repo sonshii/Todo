@@ -8,14 +8,14 @@ import { Button } from '@material-ui/core';
 import './Footer.css';
 
 const Footer = ({
-  toggle, allDestroy, completedCount, activeCount,
+  buttonFilter, deleteAllCompletedTodos, completedCount, activeCount,
 }) => {
   let clearButton = null;
 
   if (completedCount > 0) {
     clearButton = (
       <Button
-        onClick={() => allDestroy()}
+        onClick={() => deleteAllCompletedTodos()}
         size="small"
       >
         delete
@@ -31,9 +31,9 @@ const Footer = ({
           still have
         </span>
         <div className="footButton">
-          <Button variant="outlined" onClick={() => toggle('all')}>All</Button>
-          <Button variant="outlined" onClick={() => toggle('active')}>Active</Button>
-          <Button variant="outlined" onClick={() => toggle('completed')}>Completed</Button>
+          <Button variant="outlined" onClick={() => buttonFilter('all')}>All</Button>
+          <Button variant="outlined" onClick={() => buttonFilter('active')}>Active</Button>
+          <Button variant="outlined" onClick={() => buttonFilter('completed')}>Completed</Button>
         </div>
       </div>
       <div className="DeleteButton">

@@ -8,7 +8,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import './TodoItem.css';
 
 const TodoItem = ({
-  id, name, completed, onCheck, delTodo,
+  id, name, completed, toggleCompleted, deleteTodo,
 }) => (
   <li className={completed ? 'completed' : null}>
     <div className="Wrap-row-item">
@@ -16,13 +16,13 @@ const TodoItem = ({
         <Checkbox
           color="primary"
           checked={completed}
-          onClick={() => onCheck(id)}
+          onClick={() => toggleCompleted(id)}
         />
         <span>{name}</span>
       </div>
       <IconButton
         aria-label="delete"
-        onClick={() => delTodo(id)}
+        onClick={() => deleteTodo(id)}
       >
         <DeleteIcon />
       </IconButton>

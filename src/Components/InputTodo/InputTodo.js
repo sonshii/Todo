@@ -9,15 +9,15 @@ import React, { useState } from 'react';
 import { Button } from '@material-ui/core';
 import './InputTodo.css';
 
-const InputTodo = ({ AllToggle, onCreate }) => {
+const InputTodo = ({ toggleAllTodos, addTodo }) => {
   const [value, setValue] = useState('');
   return (
     <div className="InputTodo">
       <label
-        onClick={() => AllToggle()}
+        onClick={() => toggleAllTodos()}
       />
       <input className="toggle-all" type="text" placeholder="New Task" value={value} onChange={(e) => setValue(e.target.value)} />
-      <Button variant="contained" color="primary" onClick={() => onCreate(value)}>
+      <Button variant="contained" color="primary" onClick={() => addTodo(value)}>
         Add
       </Button>
     </div>
