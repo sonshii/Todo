@@ -1,29 +1,33 @@
-import { Checkbox } from '@material-ui/core';
+/* eslint-disable linebreak-style */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable linebreak-style */
+import { Checkbox, IconButton } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
-import { IconButton } from '@material-ui/core';
+import './TodoItem.css';
 
-import './TodoItem.css'
+const TodoItem = ({
+  id, name, completed, onCheck, delTodo,
+}) => (
+  <li className={completed ? 'completed' : null}>
+    <div className="Wrap-row-item">
+      <div>
+        <Checkbox
+          color="primary"
+          checked={completed}
+          onClick={() => onCheck(id)}
+        />
+        <span>{name}</span>
+      </div>
+      <IconButton
+        aria-label="delete"
+        onClick={() => delTodo(id)}
+      >
+        <DeleteIcon />
+      </IconButton>
+    </div>
+  </li>
+);
 
-const TodoList = ({id,name,completed,onCheck,delTodo})=>{
-    return(  
-        <li className={completed ? 'completed' : null}>
-            <div className="Wrap-row-item">
-                <div>
-                    <Checkbox 
-                        color="primary"
-                        checked={completed}
-                        onClick={()=> onCheck(id)}
-                        />
-                    <span>{name}</span>
-                </div>
-                <IconButton 
-                    aria-label="delete"
-                    onClick={()=> delTodo(id)}>
-                    <DeleteIcon />
-                </IconButton>     
-            </div>
-        </li>
-    )
-}
-
-export default TodoList
+export default TodoItem;

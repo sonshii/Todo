@@ -9,8 +9,6 @@
     border-radius: 5px;
     margin: 0 10px 0 10px;
 }
-label{
-}
 label:before{
     content: '❯';
     font-size: 22px;
