@@ -1,4 +1,5 @@
 import TodoItem from '../TodoItem/TodoItem'
+
 import './TodoList.css'
 
 const TodoList = ({todos, onCheck, delTodo,toggle}) =>{

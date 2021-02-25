@@ -1,5 +1,6 @@
-import './Footer.css'
 import { Button } from '@material-ui/core';
+
+import './Footer.css'
 
 const Footer = ({toggle,allDestroy,completedCount,activeCount}) =>{
 

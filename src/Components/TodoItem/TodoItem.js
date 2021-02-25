@@ -1,8 +1,8 @@
-
-import './TodoItem.css'
 import { Checkbox } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { IconButton } from '@material-ui/core';
+
+import './TodoItem.css'
 
 const TodoList = ({id,name,completed,onCheck,delTodo})=>{
     return(  

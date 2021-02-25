@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import './App.css';
+
 import InputTodo from './Components/InputTodo/InputTodo'
 import TodoList from './Components/TodoList/TodoList'
 import Footer from './Components/Footer/Footer'
+
+import './App.css';
 
 function App() {
   const [todos, setTodos] = useState([]);
